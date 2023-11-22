@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MoMoFake購物網</title>
+    
+    <style>
+        
+        .wrap{
+            display: flex;
+            justify-content: center;
+            padding: 10px;
+        }
+        div.item{
+            width: 200px;
+            border-bottom: 1px dotted #888888;
+            padding: 10px 5px;
+        }
+        div.item:hover{
+            background-color: rgb(247, 247, 176);
+        }
+        .img{
+            text-align: center;
+        }
+        .productsimg{
+            width: 160px;
+            height: 160px;
+        }
+        p.sellTitle{
+            font-size: 13px;
+            color: #dd2726;
+            margin: 1px 10px;
+        }
+        p.prdName{
+            /* font-size: 13px; */
+            color: #666;
+            flex-wrap: wrap;
+            margin: 0 0 15px;
+            overflow: hidden; 
+            text-overflow:ellipsis;
+            display: -webkit-box; 
+            -webkit-box-orient:vertical;
+            -webkit-line-clamp:2;
+        }
+        p.price{
+            color: #d62872;
+            font-size: 13px;
+        }
+        .price span{
+            font-size: 24px;
+        }
+        .star-box{
+            width: 15px;
+            height: 15px;
+            display: flex;
+        }
+        div.saleCount{
+            height: 30px;
+        }
+        p.totalSales{
+            font-size: 12px;
+            padding: 4px 10px;
+        }
+        div.icon{
+            width: 100%;
+            height: 26px;
+            display: flex;
+            background-color: #EEEEEE;
+            margin: 1px 0px 0px;
+            padding: 0px 1px;
+            justify-content: flex-end;
+        }
+        div.icon p{
+            font-size: 8px;
+            height: 20px;
+            padding: 2px 4px;
+            margin: 1px;
+            background-color: #ff4c76;
+            color:#fff;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="products">
+        <div class="wrap">
+            <div class="item">
+                <div class="img">
+                    <img class="productsimg" src="pic1.webp" alt="">
+                </div>
+                <p class="sellTitle">滿1件折1179</p>
+                <p class="prdName">[Abee 快譯通] 2.1 聲道DobyAtomos 重低音聲霸</p>
+                <p class="price">
+                    $
+                    <span>4,811</span>
+                    <span class="discount"></span>
+                </p>
+                <div class="star-box"></div>
+                <div class="saleCount">
+                    <p class="totalSales"></p>
+                </div>
+                <div class="icon">
+                    <p>折價券</p>
+                    <p>登記</p>
+                </div>
+            </div>
+            <div class="item">
+                <div class="img">
+                    <img class="productsimg" src="pic2.webp" alt="">
+                </div>
+                <p class="sellTitle">滿1件折3900</p>
+                <p class="prdName">[SONY索尼] PS5 光碟版主機</p>
+                <p class="price">
+                    $
+                    <span>17,580</span>
+                    <span class="discount"></span>
+                </p>
+                <div class="star-box">
+                    <img src="https://image.momoshop.com.tw/ecm/img/cmm/icon_star_full_24x24.svg" alt="">
+                    <img src="https://image.momoshop.com.tw/ecm/img/cmm/icon_star_full_24x24.svg" alt="">
+                    <img src="https://image.momoshop.com.tw/ecm/img/cmm/icon_star_full_24x24.svg" alt="">
+                    <img src="https://image.momoshop.com.tw/ecm/img/cmm/icon_star_full_24x24.svg" alt="">
+                    <img src="https://image.momoshop.com.tw/ecm/img/cmm/icon_star_full_24x24.svg" alt="">
+                </div>
+                <div class="saleCount">
+                    <p class="totalSales">總銷量>8,000</p>
+                </div>
+                <div class="icon">
+                    <p>折價券</p>
+                    <p>登記</p>
+                </div>
+            </div>
+            <div class="item">
+                <div class="img">
+                    <img class="productsimg" src="pic3.webp" alt="">
+                </div>
+                <p class="sellTitle">滿1件折3900</p>
+                <p class="prdName">[SONY索尼] PS5 光碟版主機</p>
+                <p class="price">
+                    $
+                    <span>17,580</span>
+                    <span class="discount"></span>
+                </p>
+                <div class="star-box">
+                    <img src="https://image.momoshop.com.tw/ecm/img/cmm/icon_star_full_24x24.svg" alt="">
+                    <img src="https://image.momoshop.com.tw/ecm/img/cmm/icon_star_full_24x24.svg" alt="">
+                    <img src="https://image.momoshop.com.tw/ecm/img/cmm/icon_star_full_24x24.svg" alt="">
+                    <img src="https://image.momoshop.com.tw/ecm/img/cmm/icon_star_full_24x24.svg" alt="">
+                    <img src="https://image.momoshop.com.tw/ecm/img/cmm/icon_star_full_24x24.svg" alt="">
+                </div>
+                <div class="saleCount">
+                    <p class="totalSales">總銷量>8,000</p>
+                </div>
+                <div class="icon">
+                    <p>折價券</p>
+                    <p>登記</p>
+                </div>
+            </div>
+            <div class="item">
+                <div class="img">
+                    <img class="productsimg" src="pic4.webp" alt="">
+                </div>
+                <p class="sellTitle">滿1件折3900</p>
+                <p class="prdName">[SONY索尼] PS5 光碟版主機</p>
+                <p class="price">
+                    $
+                    <span>17,580</span>
+                    <span class="discount"></span>
+                </p>
+                <div class="star-box">
+                    <img src="https://image.momoshop.com.tw/ecm/img/cmm/icon_star_full_24x24.svg" alt="">
+                    <img src="https://image.momoshop.com.tw/ecm/img/cmm/icon_star_full_24x24.svg" alt="">
+                    <img src="https://image.momoshop.com.tw/ecm/img/cmm/icon_star_full_24x24.svg" alt="">
+                    <img src="https://image.momoshop.com.tw/ecm/img/cmm/icon_star_full_24x24.svg" alt="">
+                    <img src="https://image.momoshop.com.tw/ecm/img/cmm/icon_star_full_24x24.svg" alt="">
+                </div>
+                <div class="saleCount">
+                    <p class="totalSales">總銷量>8,000</p>
+                </div>
+                <div class="icon">
+                    <p>折價券</p>
+                    <p>登記</p>
+                </div>
+            </div>
+            <div class="item">
+                <div class="img">
+                    <img class="productsimg" src="pic5.webp" alt="">
+                </div>
+                <p class="sellTitle">滿1件折3900</p>
+                <p class="prdName">[SONY索尼] PS5 光碟版主機</p>
+                <p class="price">
+                    $
+                    <span>17,580</span>
+                    <span class="discount"></span>
+                </p>
+                <div class="star-box">
+                    <img src="https://image.momoshop.com.tw/ecm/img/cmm/icon_star_full_24x24.svg" alt="">
+                    <img src="https://image.momoshop.com.tw/ecm/img/cmm/icon_star_full_24x24.svg" alt="">
+                    <img src="https://image.momoshop.com.tw/ecm/img/cmm/icon_star_full_24x24.svg" alt="">
+                    <img src="https://image.momoshop.com.tw/ecm/img/cmm/icon_star_full_24x24.svg" alt="">
+                    <img src="https://image.momoshop.com.tw/ecm/img/cmm/icon_star_full_24x24.svg" alt="">
+                </div>
+                <div class="saleCount">
+                    <p class="totalSales">總銷量>8,000</p>
+                </div>
+                <div class="icon">
+                    <p>折價券</p>
+                    <p>登記</p>
+                </div>
+            </div>
+            <div class="item">
+                <div class="img">
+                    <img class="productsimg" src="pic6.webp" alt="">
+                </div>
+                <p class="sellTitle">滿1件折3900</p>
+                <p class="prdName">[SONY索尼] PS5 光碟版主機</p>
+                <p class="price">
+                    $
+                    <span>17,580</span>
+                    <span class="discount"></span>
+                </p>
+                <div class="star-box">
+                    <img src="https://image.momoshop.com.tw/ecm/img/cmm/icon_star_full_24x24.svg" alt="">
+                    <img src="https://image.momoshop.com.tw/ecm/img/cmm/icon_star_full_24x24.svg" alt="">
+                    <img src="https://image.momoshop.com.tw/ecm/img/cmm/icon_star_full_24x24.svg" alt="">
+                    <img src="https://image.momoshop.com.tw/ecm/img/cmm/icon_star_full_24x24.svg" alt="">
+                    <img src="https://image.momoshop.com.tw/ecm/img/cmm/icon_star_full_24x24.svg" alt="">
+                </div>
+                <div class="saleCount">
+                    <p class="totalSales">總銷量>8,000</p>
+                </div>
+                <div class="icon">
+                    <p>折價券</p>
+                    <p>登記</p>
+                </div>
+            </div>
+        </div>
+        <div class="wrap">
+            <div class="item">
+                <div class="img">
+                    <img class="productsimg" src="pic7.webp" alt="">
+                </div>
+                <p class="sellTitle">滿1件折3900</p>
+                <p class="prdName">[SONY索尼] PS5 光碟版主機</p>
+                <p class="price">
+                    $
+                    <span>17,580</span>
+                    <span class="discount"></span>
+                </p>
+                <div class="star-box">
+                    <img src="https://image.momoshop.com.tw/ecm/img/cmm/icon_star_full_24x24.svg" alt="">
+                    <img src="https://image.momoshop.com.tw/ecm/img/cmm/icon_star_full_24x24.svg" alt="">
+                    <img src="https://image.momoshop.com.tw/ecm/img/cmm/icon_star_full_24x24.svg" alt="">
+                    <img src="https://image.momoshop.com.tw/ecm/img/cmm/icon_star_full_24x24.svg" alt="">
+                    <img src="https://image.momoshop.com.tw/ecm/img/cmm/icon_star_full_24x24.svg" alt="">
+                </div>
+                <div class="saleCount">
+                    <p class="totalSales">總銷量>8,000</p>
+                </div>
+                <div class="icon">
+                    <p>折價券</p>
+                    <p>登記</p>
+                </div>
+            </div>
+            <div class="item">
+                <div class="img">
+                    <img class="productsimg" src="pic8.webp" alt="">
+                </div>
+                <p class="sellTitle">滿1件折3900</p>
+                <p class="prdName">[SONY索尼] PS5 光碟版主機</p>
+                <p class="price">
+                    $
+                    <span>17,580</span>
+                    <span class="discount"></span>
+                </p>
+                <div class="star-box">
+                    <img src="https://image.momoshop.com.tw/ecm/img/cmm/icon_star_full_24x24.svg" alt="">
+                    <img src="https://image.momoshop.com.tw/ecm/img/cmm/icon_star_full_24x24.svg" alt="">
+                    <img src="https://image.momoshop.com.tw/ecm/img/cmm/icon_star_full_24x24.svg" alt="">
+                    <img src="https://image.momoshop.com.tw/ecm/img/cmm/icon_star_full_24x24.svg" alt="">
+                    <img src="https://image.momoshop.com.tw/ecm/img/cmm/icon_star_full_24x24.svg" alt="">
+                </div>
+                <div class="saleCount">
+                    <p class="totalSales">總銷量>8,000</p>
+                </div>
+                <div class="icon">
+                    <p>折價券</p>
+                    <p>登記</p>
+                </div>
+            </div>
+            <div class="item">
+                <div class="img">
+                    <img class="productsimg" src="pic9.webp" alt="">
+                </div>
+                <p class="sellTitle">滿1件折3900</p>
+                <p class="prdName">[SONY索尼] PS5 光碟版主機</p>
+                <p class="price">
+                    $
+                    <span>17,580</span>
+                    <span class="discount"></span>
+                </p>
+                <div class="star-box">
+                    <img src="https://image.momoshop.com.tw/ecm/img/cmm/icon_star_full_24x24.svg" alt="">
+                    <img src="https://image.momoshop.com.tw/ecm/img/cmm/icon_star_full_24x24.svg" alt="">
+                    <img src="https://image.momoshop.com.tw/ecm/img/cmm/icon_star_full_24x24.svg" alt="">
+                    <img src="https://image.momoshop.com.tw/ecm/img/cmm/icon_star_full_24x24.svg" alt="">
+                    <img src="https://image.momoshop.com.tw/ecm/img/cmm/icon_star_full_24x24.svg" alt="">
+                </div>
+                <div class="saleCount">
+                    <p class="totalSales">總銷量>8,000</p>
+                </div>
+                <div class="icon">
+                    <p>折價券</p>
+                    <p>登記</p>
+                </div>
+            </div>
+            <div class="item">
+                <div class="img">
+                    <img class="productsimg" src="pic10.webp" alt="">
+                </div>
+                <p class="sellTitle">滿1件折3900</p>
+                <p class="prdName">[SONY索尼] PS5 光碟版主機</p>
+                <p class="price">
+                    $
+                    <span>17,580</span>
+                    <span class="discount"></span>
+                </p>
+                <div class="star-box">
+                    <img src="https://image.momoshop.com.tw/ecm/img/cmm/icon_star_full_24x24.svg" alt="">
+                    <img src="https://image.momoshop.com.tw/ecm/img/cmm/icon_star_full_24x24.svg" alt="">
+                    <img src="https://image.momoshop.com.tw/ecm/img/cmm/icon_star_full_24x24.svg" alt="">
+                    <img src="https://image.momoshop.com.tw/ecm/img/cmm/icon_star_full_24x24.svg" alt="">
+                    <img src="https://image.momoshop.com.tw/ecm/img/cmm/icon_star_full_24x24.svg" alt="">
+                </div>
+                <div class="saleCount">
+                    <p class="totalSales">總銷量>8,000</p>
+                </div>
+                <div class="icon">
+                    <p>折價券</p>
+                    <p>登記</p>
+                </div>
+            </div>
+            <div class="item">
+                <div class="img">
+                    <img class="productsimg" src="pic11.webp" alt="">
+                </div>
+                <p class="sellTitle">滿1件折3900</p>
+                <p class="prdName">[SONY索尼] PS5 光碟版主機</p>
+                <p class="price">
+                    $
+                    <span>17,580</span>
+                    <span class="discount"></span>
+                </p>
+                <div class="star-box">
+                    <img src="https://image.momoshop.com.tw/ecm/img/cmm/icon_star_full_24x24.svg" alt="">
+                    <img src="https://image.momoshop.com.tw/ecm/img/cmm/icon_star_full_24x24.svg" alt="">
+                    <img src="https://image.momoshop.com.tw/ecm/img/cmm/icon_star_full_24x24.svg" alt="">
+                    <img src="https://image.momoshop.com.tw/ecm/img/cmm/icon_star_full_24x24.svg" alt="">
+                    <img src="https://image.momoshop.com.tw/ecm/img/cmm/icon_star_full_24x24.svg" alt="">
+                </div>
+                <div class="saleCount">
+                    <p class="totalSales">總銷量>8,000</p>
+                </div>
+                <div class="icon">
+                    <p>折價券</p>
+                    <p>登記</p>
+                </div>
+            </div>
+            <div class="item">
+                <div class="img">
+                    <img class="productsimg" src="pic12.webp" alt="">
+                </div>
+                <p class="sellTitle">滿1件折3900</p>
+                <p class="prdName">[SONY索尼] PS5 光碟版主機</p>
+                <p class="price">
+                    $
+                    <span>17,580</span>
+                    <span class="discount"></span>
+                </p>
+                <div class="star-box">
+                    <img src="https://image.momoshop.com.tw/ecm/img/cmm/icon_star_full_24x24.svg" alt="">
+                    <img src="https://image.momoshop.com.tw/ecm/img/cmm/icon_star_full_24x24.svg" alt="">
+                    <img src="https://image.momoshop.com.tw/ecm/img/cmm/icon_star_full_24x24.svg" alt="">
+                    <img src="https://image.momoshop.com.tw/ecm/img/cmm/icon_star_full_24x24.svg" alt="">
+                    <img src="https://image.momoshop.com.tw/ecm/img/cmm/icon_star_full_24x24.svg" alt="">
+                </div>
+                <div class="saleCount">
+                    <p class="totalSales">總銷量>8,000</p>
+                </div>
+                <div class="icon">
+                    <p>折價券</p>
+                    <p>登記</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
