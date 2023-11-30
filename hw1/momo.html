@@ -4,84 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MoMoFake購物網</title>
+    <link rel="stylesheet" href="./style.css">
     
-    <style>
-        
-        .wrap{
-            display: flex;
-            justify-content: center;
-            padding: 10px;
-        }
-        div.item{
-            width: 200px;
-            border-bottom: 1px dotted #888888;
-            padding: 10px 5px;
-        }
-        div.item:hover{
-            background-color: rgb(247, 247, 176);
-        }
-        .img{
-            text-align: center;
-        }
-
-        /* 商品圖片不得變形 可以使用object-fit調整照片
-        background-size 針對背景做調整 */
-        .productsimg{
-            width: 160px;
-            height: 160px;
-        }
-        p.sellTitle{
-            font-size: 13px;
-            color: #dd2726;
-            margin: 1px 10px;
-        }
-        p.prdName{
-            /* font-size: 13px; */
-            color: #666;
-            flex-wrap: wrap;
-            margin: 0 0 15px;
-            overflow: hidden; 
-            text-overflow:ellipsis;
-            display: -webkit-box; 
-            -webkit-box-orient:vertical;
-            -webkit-line-clamp:2;
-        }
-        p.price{
-            color: #d62872;
-            font-size: 13px;
-        }
-        .price span{
-            font-size: 24px;
-        }
-        .star-box{
-            width: 15px;
-            height: 15px;
-            display: flex;
-        }
-        div.saleCount{
-            height: 30px;
-        }
-        p.totalSales{
-            font-size: 12px;
-            padding: 4px 10px;
-        }
-        div.icon{
-            width: 100%;
-            display: flex;
-            background-color: #EEEEEE;
-            margin: 1px 0px 0px;
-            padding: 0px 1px;
-            justify-content: flex-end;
-        }
-        div.icon p{
-            font-size: 8px;
-            padding: 2px 4px;
-            margin: 1px;
-            background-color: #ff4c76;
-            color:#fff;
-        }
-
-    </style>
 </head>
 <body>
     <div class="products">
