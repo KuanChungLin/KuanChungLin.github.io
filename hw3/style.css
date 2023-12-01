@@ -1,0 +1,131 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+h4,
+p {
+    overflow: hidden; 
+    text-overflow:ellipsis;
+    display: -webkit-box; 
+    -webkit-box-orient:vertical;
+    -webkit-line-clamp:3;
+}
+/* ================================= */
+.container {
+    width: 1260px;
+    margin: auto;
+    padding: 96px 0 64px;
+}
+/* ================================= */
+.container-title {
+    width: 100%;
+    margin-bottom: 24px;
+    padding-top: 10px;
+    border-top: 2px solid black;
+}
+.container-title h2 {
+    font-size: 24px;
+}
+/* ================================= */
+.content-title {
+    width: 100%;
+    border-top: 1px solid rgb(197, 197, 197);
+    padding-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    margin: 64px 0 24px;
+}
+.content-title h3 p {
+    font-size: 26px;
+    display: inline;
+}
+.content-title h3 span {
+    font-size: 14px;
+    color: #6c6d6e;
+}
+.content-title a {
+    font-size: 13px;
+    text-decoration: none;
+    color: #f65936;
+}
+.content-title a::after {
+    content: '→';
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 1px solid #f65936;
+    border-radius: 50%;
+    margin-left: .4em;
+    text-align: center;
+}
+/* ================================= */
+.content-item{
+    display: flex;
+}
+.content-item:nth-of-type(4n) {
+    flex-direction: row-reverse;
+}
+/* ================================= */
+.content-item a {
+    text-decoration: none;
+}
+.main-article {
+    width: 50%;
+    margin: 0 10px;
+}
+.article-title {
+    width: 100%;
+}
+.article-title h4 {
+    font-size: 12px;
+    min-height: 16.5px;
+    color: #202124;
+}
+.article-img img {
+    width: 100%;
+    border-radius: 10px;
+    /* 指定長寬比、保持覆蓋容器 */
+    aspect-ratio: 16 / 10;
+    object-fit: cover;
+}
+.article-text {
+    display: flex;
+    color: #222;
+}
+.article-text .text-title {
+    width: 50%;
+    font-size: 24px;
+    margin: 30px 0px;
+}
+.article-text .text-content {
+    width: 50%;
+    font-size: 13px;
+    margin: 30px 15px;
+}
+.text-content .posttime {
+    margin: 15px 0;
+}
+.secondary-article {
+    width: 50%;
+    margin: 0 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+}
+.secondary-article .article-text {
+    height: 144px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+.secondary-article .text-title {
+    width: 100%;
+}
+.secondary-article .text-title h4{
+    font-size: 16px;
+}
+.secondary-article .posttime {
+    font-size: 12px;
+    margin-top: auto;
+}
+/* ================================= */
