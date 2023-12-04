@@ -1,0 +1,170 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+/* ================================= */
+.advantage {
+    width: 960px;
+    margin: 0 auto;
+    padding-top: 96px;
+}
+.content {
+    height: auto;
+    min-height: 815px;
+    width: 100%;
+    position: relative;
+}
+.content + .content {
+    margin-top: 108px;
+}
+/* ================================= */
+.content .content-bottom {
+    width: 440px;
+    min-height: 290px;
+    position: relative;
+    background-color: #EEEEEE;
+    right: 0;
+    top: 36px;
+    left: 520px;
+}
+
+.content:nth-child(even) .content-bottom {
+    width: 518px;
+    min-height: 413px;
+    right: 160px;
+    top: 56px;
+    left: 282px;
+}
+/* ================================= */
+.content .content-middle {
+    width: 695px;
+    position: absolute;
+    right: 80px;
+    top: 130px;
+}
+
+.content:nth-child(even) .content-middle {
+    right: 265px;
+    top: 130px;
+}
+
+.content-middle img {
+    width: 100%;
+    vertical-align: bottom;
+}
+/* ================================= */
+.content-top {
+    height: auto;
+    position: absolute;
+    top:0;
+}
+/* ================================= */
+.content-top .content-title {
+    width: 355px;
+    max-height: 380px;
+}
+
+.content:nth-child(even) .content-top .content-title {
+    margin-left: 605px;
+}
+
+.content-title .title-head {
+    min-height: 120px;
+    background-color: rgb(202, 0, 0);
+    color: white;
+}
+
+.title-head h2 {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content:center;
+}
+
+.title-head h2 p {
+    writing-mode: vertical-rl;
+    font-size: 100px;
+    font-weight: 200;
+}
+
+.title-head h2 span {
+    font-size: 50px;
+    font-weight: 200;
+}
+
+.content-title .title-body {
+    min-height: 260px;
+    padding: 18px 18px 54px 18px;
+    box-sizing: border-box;
+    background-color: black;
+    color: white;
+    line-height:3em;
+}
+
+.title-body h3 {
+    font-size: 24px;
+    font-weight: 400;
+}
+
+.title-body p {
+    font-size: 20px;
+    line-height: 1.75em;
+    color: rgb(206, 205, 205);
+}
+
+/* ================================= */
+.content-top .title-foot {
+    width: 682px;
+    padding: 20px;
+    background-color: rgb(241, 240, 240);
+    margin-top: 9em;
+    margin-left: 3em;
+}
+
+.content:nth-child(even) .content-top .title-foot {
+    margin-left: 238px;
+}
+
+.title-foot .innovation {
+    color: rgb(186, 0, 0);
+    font-weight: 700;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.title-foot .innovation p::after {
+    display: inline-block;
+    content: "";
+    width: 25em;
+    height: 1px;
+    background-color: rgb(186, 0, 0);
+    margin-left: .5em;
+    vertical-align: middle;
+}
+
+.title-foot .change .change-title {
+    width: fit-content;
+    background-color: black;
+    color: white;
+    padding: 2px 4px;
+}
+
+.change-title h4 {
+    font-weight: 300;
+}
+
+.change .change-directions p {
+    color: rgb(145, 144, 144);
+    margin: 4px;
+}
+
+.change .change-directions p::before {
+    content: "";
+    display: inline-block;
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background-color: rgb(209, 0, 0);
+    margin: 4px 5px;
+}
+/* ================================= */
