@@ -135,7 +135,7 @@
 .title-foot .innovation p::after {
     display: inline-block;
     content: "";
-    width: 25em;
+    width: 26.75em;
     height: 1px;
     background-color: rgb(186, 0, 0);
     margin-left: .5em;
