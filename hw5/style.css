@@ -390,7 +390,7 @@ header {
     opacity: 98%;
 }
 .projects-part .projects-content .projects-list-content .title {
-    margin: 60px 20px;
+    margin: 60px 20px 160px;
 }
 .projects-part .projects-content .projects-list-content .title h3 {
     font-size: 34px;
@@ -399,8 +399,12 @@ header {
 }
 .projects-part .projects-content .projects-list-content .viewsite {
     width: fit-content;
-    margin: 160px 20px;
+    margin: 0 20px;
     color: white;
+    transition: .5s;
+}
+.projects-part .projects-content .projects-list-content .viewsite:hover {
+    color: #5d6678;
 }
 /* ====================================== */
 .signup .signup-part {
