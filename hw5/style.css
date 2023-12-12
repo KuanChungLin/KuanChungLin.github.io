@@ -244,7 +244,7 @@ header {
     grid-template-columns: repeat(2,1fr);
 }
 .advantage .advantage-part .advantage-listpart .advantage-list {
-    margin: 15px;
+    margin: 10px;
     background-color: #3f81ff;
     padding: 40px 20px;
     border-radius: 10px;
