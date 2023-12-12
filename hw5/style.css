@@ -542,7 +542,7 @@ header {
     height: 30px;
     text-indent: 15px;
     margin-bottom: 20px;
-    border: 0.5px solid #bdbec0;
+    border: 0.5px solid #dcdcdc;
     border-radius: 10px;
 }
 .signup .signup-part .signup-content .signup-area textarea {
@@ -551,7 +551,7 @@ header {
     padding: 10px 15px;
     box-sizing: border-box;
     resize: none;
-    border: 0.5px solid #bdbec0;
+    border: 0.5px solid #dcdcdc;
     border-radius: 10px;
 }
 .signup .signup-part .signup-content .signup-area .sendbutton {
@@ -599,6 +599,9 @@ header {
     width: 80%;
     height: 40px;
     text-indent: 15px;
+    border: 1px solid #ffffff;;
+    border-radius: 5px;
+    box-shadow: 0px 8px 50px 0px rgba(211, 211, 211, 0.46);
 }
 .getnews .getnews-part .getnews-input .subscribebutton {
     display: flex;
@@ -709,9 +712,17 @@ header {
     color: #5d6678;
     font-size: 12px;
     font-weight: 200;
+    transition: .5s;
+}
+.footer .privacy-policy-faq .privacy-policy a:hover {
+    color: rgb(106, 231, 106);
 }
 .footer .privacy-policy-faq .faq a {
     color: #5d6678;
     font-size: 12px;
     font-weight: 200;
+    transition: .5s;
+}
+.footer .privacy-policy-faq .faq a:hover {
+    color: rgb(106, 231, 106);
 }
