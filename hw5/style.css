@@ -234,7 +234,7 @@ header {
     margin: auto;
     display: grid;
     grid-template-columns: repeat(2,1fr);
-    gap: 50px;
+    gap: 70px;
     position: relative;
     z-index: 1;
 }
@@ -244,9 +244,9 @@ header {
     grid-template-columns: repeat(2,1fr);
 }
 .advantage .advantage-part .advantage-listpart .advantage-list {
-    margin: 10px;
+    margin: 15px;
     background-color: #3f81ff;
-    padding: 40px 30px;
+    padding: 40px 20px;
     border-radius: 10px;
 }
 .advantage .advantage-part .advantage-listpart .advantage-list p {
@@ -462,6 +462,7 @@ header {
 }
 .projects-part .projects-content .projects-list {
     position: relative;
+    box-shadow: 0px 8px 32px 0px rgba(213, 213, 213, 0.46);
 }
 .projects-part .projects-content .projects-img img{
     width: 100%;
@@ -529,6 +530,7 @@ header {
     display: flex;
     flex-direction: column;
     margin: 30px 70px 40px 0;
+    box-shadow: 0px 8px 32px 0px rgba(213, 213, 213, 0.46);
 }
 .signup .signup-part .signup-content .signup-area .signup-title {
     margin-bottom: 30px;
@@ -666,7 +668,6 @@ header {
     color: rgb(106, 231, 106);
 }
 .information .information-part .information-list .information-link svg {
-    width: 20px;
     padding: 10px;
     border: 1px solid #d3d3d3;
     border-radius: 50%;
