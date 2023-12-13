@@ -464,7 +464,7 @@ header {
     position: relative;
     box-shadow: 0px 8px 32px 0px rgba(213, 213, 213, 0.46);
 }
-.projects-part .projects-content .projects-img img{
+.projects-part .projects-content .projects-list-img img{
     width: 100%;
     border-radius: 5px;
 }
