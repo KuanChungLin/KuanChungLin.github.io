@@ -30,7 +30,7 @@
     <script>
         let maxNum = 100;
         let minNum = 1;
-        let randomNum = Math.round(Math.random()*99) + 1;
+        let randomNum = parseInt(Math.round(Math.random()*99) + 1);
         let inputText = document.getElementById("input-num");
 
         
@@ -67,17 +67,17 @@
         }
 
         function checkGuess() {
-            let guessNum = inputText.value;
+            let guessNum = parseInt(inputText.value);
             if(!isNaN(guessNum)){
-                if(guessNum == randomNum)
+                if(guessNum === randomNum)
                 {
                     alert(`您猜中了，答案是${randomNum}，點擊確定後遊戲進行重置`);
                     reset();
                 } 
-                else if (guessNum > minNum && guessNum < randomNum){
+                else if (guessNum < randomNum && guessNum > minNum){
                     minNum = guessNum;
                 }
-                else if (guessNum < maxNum && guessNum > randomNum){
+                else if (guessNum > randomNum && guessNum < maxNum){
                     maxNum = guessNum;
                 }
                 else {
