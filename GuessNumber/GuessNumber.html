@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <h1>猜數字遊戲</h1>
+            <div class="input">
+                <input id="input-num" type="text" placeholder="請輸入數字">
+            </div>
+            <p id="max-and-min"></p>
+            <div class="button-group">
+                <button id="guess">猜！</button>
+                <button id="reset">重新開始</button>
+                <button id="answer">看答案</button>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+    
+    <script>
+        let maxNum = 100;
+        let minNum = 1;
+        let randomNum = Math.round(Math.random()*99) + 1;
+        let inputText = document.getElementById("input-num");
+
+        
+        window.onload = function () {
+            upDateNumber();
+        }
+
+        let btnGuess = document.getElementById("guess");
+        btnGuess.addEventListener('click', function () {
+            checkGuess();
+        })
+
+        let btnReset = document.getElementById("reset")
+        btnReset.addEventListener('click', function () {
+            reset();
+        })
+
+        let btnAnswer = document.getElementById("answer")
+        btnAnswer.addEventListener('click', function () {
+            alert(`答案是${randomNum}`);
+            inputText.value = "";
+        })
+
+        function reset () {
+            maxNum = 100;
+            minNum = 1;
+            randomNum = Math.round(Math.random()*99) + 1 ;
+            inputText.value = "";
+            upDateNumber();
+        }
+
+        function upDateNumber () {
+            document.getElementById("max-and-min").innerText = `請輸入${minNum} ~ ${maxNum}之間的數字`;
+        }
+
+        function checkGuess() {
+            let guessNum = inputText.value;
+            if(!isNaN(guessNum)){
+                if(guessNum == randomNum)
+                {
+                    alert(`您猜中了，答案是${randomNum}，點擊確定後遊戲進行重置`);
+                    reset();
+                } 
+                else if (guessNum > minNum && guessNum < randomNum){
+                    minNum = guessNum;
+                }
+                else if (guessNum < maxNum && guessNum > randomNum){
+                    maxNum = guessNum;
+                }
+                else {
+                    alert(`請輸入${minNum} ~ ${maxNum}之間的數字`);
+                }
+            } 
+            else {
+                alert("輸入的值不是整數")
+            }
+            upDateNumber();
+        }
+
+    </script>
+</body>
+</html>
