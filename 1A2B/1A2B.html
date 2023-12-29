@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <style>
+        .wrap {
+            width: 500px;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap my-3 mx-auto">
+        <h1 class="text-center">1A2B 猜數字遊戲</h1>
+        <div class="btn-group w-100" role="group" aria-label="Basic outlined example">
+            <button type="button" class="start-btn btn btn-outline-secondary">開始</button>
+            <button type="button" class="giveup-btn btn btn-outline-secondary disabled">放棄重來</button>
+            <button type="button" class="answer-btn btn btn-outline-secondary disabled">看答案</button>
+        </div>
+        <div class="input-group mb-3">
+            <span class="input-group-text" id="inputGroup-sizing-default">猜答案</span>
+            <input type="text" class="input-text form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="請輸入0~9不重複的四個整數" maxlength="4" disabled>
+            <button class="guess-btn btn btn-outline-secondary disabled" type="button" id="button-addon2">猜！</button>
+        </div>
+        <ul class="list-group">
+            <!-- <li class="list-group-item d-flex p-3">
+                    <p class="m-0 p-1 px-2 bg-success text-white flex-grow-0 rounded">4A0B</p>
+                    <p class="m-0 p-1 rounded">4321</p>
+                </li>
+            <li class="list-group-item d-flex p-3">
+                <p class="m-0 p-1 px-2 bg-danger text-white flex-grow-0 rounded">2A2B</p>
+                <p class="m-0 p-1 rounded">1324</p>
+            </li> -->
+        </ul>
+    </div>
+    
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script>
+        const startBtn = document.querySelector(".start-btn");
+        const giveupBtn = document.querySelector(".giveup-btn");
+        const answerBtn = document.querySelector(".answer-btn");
+        const guessBtn = document.querySelector(".guess-btn");
+        const inputText = document.querySelector(".input-text");
+        const ul = document.querySelector(".list-group");
+        let answerArray = []
+        
+
+        window.onload = function () {
+            startBtn.addEventListener("click", startGame);
+            giveupBtn.addEventListener("click", resetGame);
+            answerBtn.addEventListener("click", showAnswer);
+            guessBtn.addEventListener("click", guessAnswer);
+            inputText.addEventListener("keypress", (e) =>{
+                if(e.key == "Enter"){
+                    guessAnswer();
+                }
+            });
+
+        }
+
+        // 產生亂數，按鈕開啟
+        function startGame() {
+            let _ansArray = [];
+            for (let i = 0 ; i < 4 ; i++) {
+                let randomNum = Math.floor(Math.random()* 10);
+                while(_ansArray.includes(randomNum)) {
+                    randomNum = Math.floor(Math.random()* 10);
+                }
+                _ansArray.push(randomNum);
+            }
+            answerArray = _ansArray;
+            inputText.value = "";
+            ul.innerHTML = "";
+
+            IsbtnDisabled(false);
+        }
+
+        // 放棄重來時觸發顯示答案及重新產生亂數
+        function resetGame() {
+            showAnswer();
+            IsbtnDisabled(true);
+        }
+
+        // 按鈕判斷
+        function IsbtnDisabled(bool) {
+            if(bool){
+                giveupBtn.classList.add("disabled");
+                answerBtn.classList.add("disabled");
+                guessBtn.classList.add("disabled");
+                inputText.setAttribute("disabled", "true");
+                startBtn.classList.remove("disabled")
+            }
+            else {
+                giveupBtn.classList.remove("disabled");
+                answerBtn.classList.remove("disabled");
+                guessBtn.classList.remove("disabled");
+                inputText.removeAttribute("disabled");
+                startBtn.classList.add("disabled");
+            }
+        }
+
+        // 顯示答案
+        function showAnswer() {
+            let answer = answerArray.join("");
+            alert(`答案是：${answer}`);
+            inputText.value = "";
+        }
+
+        // 猜答案的第一關：判斷是否輸入整數
+        function guessAnswer() {
+            let guessNum = inputText.value;
+            if (isNaN(parseInt(guessNum))){
+                alert("輸入的值不是整數");
+            }
+            else{
+                answerCheck(guessNum);
+                inputText.value = "";
+            }
+            console.log(guessNum);
+        }
+
+        // 猜答案的第二關：判斷輸入數字跟亂數是否相同
+        function answerCheck(guessNumber) {
+            let checkArray = String(guessNumber).split('').map(Number);
+            let aCount = 0;
+            let bCount = 0;
+            const distinctCount = new Set(checkArray).size;
+            if (checkArray.length < 4 || distinctCount != 4){
+                alert("輸入的格式有誤")
+            }
+            else {
+                for(let j = 0 ; j < answerArray.length ; j++){
+                    if(checkArray[j] === answerArray[j]){
+                        aCount++;
+                    }
+                    else if (answerArray.includes(checkArray[j])) {
+                        bCount++;
+                    }
+                }
+                listPrint(aCount, bCount, guessNumber);
+            }
+        }
+
+        // 猜答案第三關：是否為4A，並留存遊戲紀錄
+        function listPrint (a, b, guessNumber) {
+            let li = document.createElement("li");
+            let color = "danger";
+            if (a == 4){
+                color = "success";
+                alert("恭喜過關");
+                IsbtnDisabled(true);
+            }
+            li.setAttribute("class","list-group-item d-flex p-3")
+            li.innerHTML = (`<p class="m-0 p-1 px-2 bg-${color} text-white flex-grow-0 rounded">${a}A${b}B</p>
+                            <p class="m-0 p-1 rounded">${guessNumber}</p>`)
+            
+            ul.prepend(li);
+        }
+    </script>
+</body>
+</html>
