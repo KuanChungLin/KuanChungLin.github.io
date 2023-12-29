@@ -124,7 +124,7 @@
 
         // 猜答案的第二關：判斷輸入數字跟亂數是否相同
         function answerCheck(guessNumber) {
-            let checkArray = String(guessNumber).split('').map(Number);
+            let checkArray = String(guessNumber).trim().split('').map(Number);
             let aCount = 0;
             let bCount = 0;
             const distinctCount = new Set(checkArray).size;
