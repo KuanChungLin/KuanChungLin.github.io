@@ -13,8 +13,8 @@ addBtn.addEventListener("click", () => {
     if (todo.value.trim() !== "") {
         addAgent(todo);
         saveToLocalStorage();
-        todo.value = ""
     }
+    todo.value = ""
 })
 
 // 代辦事項新增
@@ -41,7 +41,7 @@ function addAgent(todoAgent) {
     })
 
     const inputTodoContent = divItem.querySelector(".input-Todo");
-    inputTodoContent.value = todoAgent.value;
+    inputTodoContent.value = todoAgent.value.trim();
     
     console.log(inputTodoContent.value);
 
