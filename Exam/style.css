@@ -1,0 +1,14 @@
+.wrap {
+    width: 800px;
+}
+
+.div-Todo {
+    width: 80%;
+    border-radius: 5px;
+}
+
+.input-Todo {
+    overflow: hidden; 
+    text-overflow: ellipsis; 
+    white-space: nowrap; 
+}
