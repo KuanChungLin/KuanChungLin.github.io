@@ -10,9 +10,11 @@ window.onload = function () {
 }
 
 addBtn.addEventListener("click", () => {
+    if (todo.value.trim() !== "") {
         addAgent(todo);
         saveToLocalStorage();
         todo.value = ""
+    }
 })
 
 // 代辦事項新增
@@ -28,7 +30,7 @@ function addAgent(todoAgent) {
     <div class="div-Btn mx-auto">
         <button class="edit-Btn btn btn-warning mx-1">編輯</button>
         <button class="del-Btn btn btn-danger">刪除</button>
-    </div>`
+    </div>`;
     
     const checkBox = divItem.querySelector(".check-Box");
     checkBox.checked = todoAgent.completed;
@@ -40,6 +42,7 @@ function addAgent(todoAgent) {
 
     const inputTodoContent = divItem.querySelector(".input-Todo");
     inputTodoContent.value = todoAgent.value;
+    
     console.log(inputTodoContent.value);
 
     const editBtn = divItem.querySelector(".edit-Btn");
